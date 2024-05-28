@@ -1,7 +1,11 @@
 *{
     padding: 0;
     margin: 0;
-    border: 1px solid red;
+    /* border: 1px solid red; */
+}
+
+:root{
+    --padding: 2vw;
 }
 
 @font-face {
@@ -14,6 +18,7 @@
 main{
     min-height: 100vh;
     background-color: black;
+    font-family: sans-serif;
 }
 
 /* Flex container*/
@@ -23,11 +28,12 @@ main{
     align-items: center;
     &.vertical{
         flex-direction: column;
+        width: 100%;
     }
-    &.form{
+    &.info{
         flex-basis: 50%;
         height: 100vh;
-        background-color: white;
+        background-color: rgba(255, 255, 255, 98%);
     }
 }
 
@@ -67,4 +73,63 @@ a:link{
 
 a:visited{
     color: grey;
+}
+
+.form{
+    background-color: white;
+    padding-left: var(--padding);
+    box-sizing: border-box;
+    align-items: flex-start;
+    padding-top: 2vh;
+    margin-bottom: 2vh;
+    box-shadow: rgba(0, 0, 0, 35%) 0px 2px;
+    >p{
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+}
+
+.text{
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 100%;
+    padding-left: var(--padding);
+    box-sizing: border-box;
+}
+
+form .input{
+    font-size: 0.8rem;
+    min-width: 20vw;
+    align-items: flex-start;
+    label{
+        font-weight: bold;
+        color: rgba(0, 0, 0, 65%);
+    }
+    input{
+        min-height: 3vh;
+        min-width: 15vw;
+        border: 0.5px solid grey;
+        border-radius: 6px;
+    }
+}
+
+button{
+    align-self: flex-start;
+    margin-left: 2vw;
+    background-color: #596D48;
+    color: white;
+    font-weight: bold;
+    padding: 1.5vh 3.5vw;
+    border-radius: 5px;
+    border: none;
+}
+
+.login{
+    align-self: flex-start;
+    margin-left: 2vw;
+    font-size: 1rem;
+    font-weight: bold;
+    >a{
+        color: #596D48;
+    }
 }
